@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.lang.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+public class User {
+	
+	private String firstName;
+	private String lastName;
+	private String uuid; //id no of user
+	private byte pinHash[];
+	
+	private ArrayList<Account> accounts;
+	//list of account for the use
+	
+	public User(String firstName, String lastName,String pin,Bank theBank)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.uuid = theBank.getNewUserUUID();
+		//store the MD5 hash of the user pin number for security
+		try {
+		MessageDigest md=MessageDigest.getInstance("MD5");
+		this.pinHash =md.digest(pin.getBytes( ));
+		}catch (NoSuchAlgorithmException e)
+		{
+			System.err.println("Error caught NoSuchAlgorithmException ");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		
+		this.accounts = new ArrayList<Account>(); //creating empty list of accounts
+		
+		System.out.printf("New user %s.%s with ID %s created.\n",lastName,firstName,this.uuid);
+			
+	}
+	
+	
+	//add an account for the user
+	public void addAccount(Account onAcct)
+	{
+		this.accounts.add(onAcct);
+	}
+	
+	public String getUUID() 
+	{
+		return this.uuid;
+		
+	}
+	
+	
+	//check weather a given pin matches the true user pin
+	public boolean  validatePin(String aPin)
+	{
+		try {
+		MessageDigest md= MessageDigest.getInstance("MD5");
+		return MessageDigest.isEqual(md.digest(aPin.getBytes()),this.pinHash);
+		}catch (NoSuchAlgorithmException e) {
+			System.err.println("Error caught NoSuchAlgorithmException ");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		return false;
+	}
+}

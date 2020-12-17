@@ -1,0 +1,43 @@
+for _ in range(int(input())):
+    N=int(input())
+    if N%4!=0:
+        ans=[]
+        for i in range(1,N+1):
+            print(1,i,i,i)
+            ans.append(int(input()))
+            if ans[-1]==-1:
+                break
+        print(2,*ans)
+        op=input()
+        #if op=='-1':
+        #    break
+    ANS=[]
+    for i in range(1,N+1,4):
+        if i+3>N:
+            break
+        print(1,i,i+1,i+2)
+        n1=int(input())
+        print(1,i,i+1,i+3)
+        n2=int(input())
+        print(1,i,i+2,i+3)
+        n3=int(input())
+        print(1,i+1,i+2,i+3)
+        n4=int(input())
+        a=n1^n2^n3
+        b=n1^n2^n4
+        c=a^b^n1
+        d=a^b^n2
+        ANS.append(a)
+        ANS.append(b)
+        ANS.append(c)
+        ANS.append(d)
+    l=len(ANS)
+    d=ANS[-1]
+    while l<N:
+        ANS.append(d+1)
+        d+=1
+        l+=1
+    print(2,*ANS)
+    op=input()
+    if op=='-1':
+        break

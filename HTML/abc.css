@@ -1,0 +1,19 @@
+body{
+    background-color: blueviolet;
+}
+.div1{
+    background-color: greenyellow;
+    max-width:700px;
+    max-height:300px;
+    padding:10px;
+    margin-left:10px;
+    border-style: ridge;
+}
+.div2{
+    background-color: black;
+    max-width: 600px ;
+    max-height:150px;
+    border-left:4px solid skyblue;
+    padding:1px;
+    margin-left:5px;
+}

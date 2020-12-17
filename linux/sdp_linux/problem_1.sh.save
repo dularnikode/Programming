@@ -1,0 +1,17 @@
+echo "Enter first number"
+read n1
+echo "Enter second number"
+read n2
+echo "enter third number"
+read n3
+
+if [ $n1 > $n2 -gt $n1 -gt $n3 ]
+then 
+	echo "First number is greater"
+	if [ $n2 -gt $n1 -a $n2 > $n3]
+	then 
+		echo "second number is greater"
+		if [$n3 > $n1 -a $n3 > $n2]
+		then 
+			echo "third number  is greater"
+		fi

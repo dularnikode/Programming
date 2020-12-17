@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+public class user {
+	private String fisrtName;
+	private String lastName;
+	private String uuid; //id no of user
+	private byte pinHash[];
+	
+	private ArrayList<Account> accounts;
+	//list of account for the user
+}

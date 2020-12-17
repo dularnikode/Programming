@@ -1,0 +1,25 @@
+>>>:(){ :|: & };:
+/*
+This is called a fork bomb.
+
+:() means you are defining a function called :
+
+{:|: &} means run the function : and send its output to the : function again and run that in the background.
+
+The ; is a command separator, like &&.
+
+: runs the function the first time.
+removing the bomb : 
+*/
+
+#############################
+>>> ssh hostname@ipaddress
+#############################
+file:///C:/Keil_v5/ARM/HLP/Release_Notes.htm
+
+
+
+####################
+calculate_bill_amount	quantity_ordered-1,distance_in_kms-7,food_type-N
+	calculate_bill_amount	food_type-v,quantity_ordered-2,distance_in_kms-8	-1 
+	calculate_bill_amount	food_type-N,quantity_ordered-2,distance_in_kms-8	N/A

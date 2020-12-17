@@ -1,0 +1,9 @@
+import java.util.Date;
+public class Transaction {
+
+	private double amount;
+	private Date timestamp;//gives time and date of transactions
+	private String memo;//the account in which the tansaction was performed;
+	private Account inAccount;
+	
+}
