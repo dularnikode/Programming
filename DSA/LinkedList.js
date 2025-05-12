@@ -45,5 +45,7 @@ function insertLast (val){
 
 // printLinkedList(head);
 // insertAtstartOfLinkedList(0)
+// printLinkedList(head)
+
 insertLast(20);
 printLinkedList(head);
