@@ -28,12 +28,13 @@ const isPrime  = (n) =>{
 
 /**Sieve of Eratosthenes */ 
 // Time Complexity :  O(n log(log n))
+// Space Complexity : O(n)
 /**
  * @param {number} n
  * @return {number}
  */
 var countPrimes = function(n) {
-    let arr = new Array(n + 1).fill(true);
+    let arr = new Array(n).fill(true);
     arr[0] = arr[1] = false;
     let prime = 2;
     let count = 0;
@@ -50,9 +51,6 @@ var countPrimes = function(n) {
             count++;
         }
     }
-
-
-    console.log(arr);
     return count;
 };
 
