@@ -28,7 +28,7 @@ const maximumDotProduct = (nums1, nums2, i = 0, j = 0) => {
             return Number.MIN_SAFE_INTEGER;
         }
 
-        if(dp[i][j] !== Number./Users/dularnikode/Coding/Interview/countPrime.js){
+        if(dp[i][j] !== Number.MIN_SAFE_INTEGER){
             return dp[i][j];
         }
 
